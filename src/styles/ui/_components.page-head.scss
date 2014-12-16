@@ -2,10 +2,10 @@
 //    #HEADER
 //\*------------------------------------*/
 
-$header-height:  450px;
+$header-height: 450px;
 
 .page-head {
-    padding-top:    $inuit-base-spacing-unit--small;
+    padding-top: $inuit-base-spacing-unit--small;
     padding-bottom: $inuit-base-spacing-unit--small;
     height: $header-height;
 
@@ -60,6 +60,6 @@ $header-height:  450px;
     display: inline-block;
 
     &:hover {
-        background: rgba(255,255,255,.2);
+        background: rgba(255, 255, 255, .2);
     }
 }

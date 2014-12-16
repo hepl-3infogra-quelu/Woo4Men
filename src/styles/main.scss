@@ -21,9 +21,12 @@
 @import "ui/base.links";
 
 //-- Object
+@import "bower_components/inuit-layout/objects.layout";
 @import "ui/objects.wrappers";
 
 //-- Components
 @import "ui/components.page-head.scss";
 
 //-- Trumps
+$inuit-use-fractions:    false;
+@import "bower_components/inuit-widths/trumps.widths";
