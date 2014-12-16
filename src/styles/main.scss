@@ -1,9 +1,29 @@
+//-- Settings
 @import "bower_components/inuit-defaults/settings.defaults";
+@import "bower_components/inuit-responsive-settings/settings.responsive";
+@import "ui/settings.colors.scss";
 
+//-- Tools
 @import "bower_components/inuit-functions/tools.functions";
 @import "bower_components/inuit-mixins/tools.mixins";
+@import "bower_components/inuit-responsive-tools/tools.responsive";
+@import "ui/tools.mixins";
 
+//-- Generic
+@import "bower_components/inuit-reset/generic.reset";
 @import "bower_components/inuit-normalize/generic.normalize";
 @import "bower_components/inuit-box-sizing/generic.box-sizing";
+@import "ui/generic.paragraph";
 
+//-- Base
 @import "bower_components/inuit-page/base.page";
+@import "bower_components/inuit-headings/base.headings";
+@import "ui/base.links";
+
+//-- Object
+@import "ui/objects.wrappers";
+
+//-- Components
+@import "ui/components.page-head.scss";
+
+//-- Trumps

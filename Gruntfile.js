@@ -51,7 +51,8 @@ module.exports = function ( grunt ) {
                     // '<%= folders.dist %>/page.html': '<%= folders.app %>/jade/page/index.jade',
                 },
                 options: {
-                    pretty: false
+                    pretty: false,
+                    basedir: '<%= folders.app %>/jade'
                 }
             }
         },
@@ -61,7 +62,7 @@ module.exports = function ( grunt ) {
                     style: 'expanded'
                 },
                 files: {
-                    '<%= folders.dist %>/css/main.css': '<%= folders.app %>/stylus/main.scss'
+                    '<%= folders.dist %>/css/main.css': '<%= folders.app %>/styles/main.scss'
                 }
             }
         },

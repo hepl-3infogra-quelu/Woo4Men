@@ -1,0 +1,65 @@
+///*------------------------------------*\
+//    #HEADER
+//\*------------------------------------*/
+
+$header-height:  450px;
+
+.page-head {
+    padding-top:    $inuit-base-spacing-unit--small;
+    padding-bottom: $inuit-base-spacing-unit--small;
+    height: $header-height;
+
+    background: url(../img/page-header.jpg) center center;
+    @include vendor(background-size, cover);
+    color: $color-page-head;
+}
+
+.page-head__menu {
+    margin-top: $inuit-base-spacing-unit--large;
+    height: 80px;
+    line-height: 80px;
+    position: relative;
+}
+
+.page-head__menu--brand {
+    background: $color-page-head-brand-background;
+    height: 100%;
+    text-align: right;
+    color: $color-dark;
+    @include inuit-font-size($inuit-base-font-size);
+}
+
+.page-head__menu--home {
+    background: url(../img/icon-home.png) no-repeat center center;
+    position: absolute;
+    top: 10px;
+    height: 60px;
+    width: 60px;
+    text-indent: 9999px;
+    margin-left: -30px;
+    @include transition(all, 1s, ease-in-out);
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    @include media-query('retina') {
+        background: url(../img/icon-home@2x.png) no-repeat center center;
+        background-size: 60px;
+    }
+}
+
+.page-head__menu--links {
+    background: $color-page-head-menu-background;
+    height: 100%;
+}
+
+.page-head__menu--link {
+    padding: 0 $inuit-base-spacing-unit;
+    color: #fff;
+    display: inline-block;
+
+    &:hover {
+        background: rgba(255,255,255,.2);
+    }
+}
