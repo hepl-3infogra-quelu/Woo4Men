@@ -20,7 +20,7 @@ module.exports = function ( grunt ) {
         },
         watch: {
             styles: {
-                files: [ '<%= folders.app %>/styl/**/*.styl' ],
+                files: [ '<%= folders.app %>/styles/**/*.scss' ],
                 tasks: [ 'sass', 'notify_hooks' ]
             },
             html: {
