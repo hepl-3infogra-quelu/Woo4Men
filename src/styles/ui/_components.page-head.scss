@@ -22,11 +22,18 @@ $header-height: 450px;
 }
 
 .page-head__menu--brand {
-    background: $color-page-head-brand-background;
+    background: $background-color-page-head-brand url(../img/logo.png) 15% center no-repeat;
     height: 100%;
-    text-align: right;
     color: $color-dark;
-    @include inuit-font-size($inuit-base-font-size);
+    padding-left: 70px;
+
+    @include media-query('portable') {
+        background-position: center center;
+
+        span {
+            display: none;
+        }
+    }
 }
 
 .page-head__menu--home {
@@ -50,8 +57,9 @@ $header-height: 450px;
 }
 
 .page-head__menu--links {
-    background: $color-page-head-menu-background;
+    background: $background-color-page-head-menu;
     height: 100%;
+    padding-left: $inuit-base-spacing-unit;
 }
 
 .page-head__menu--link {
@@ -61,5 +69,18 @@ $header-height: 450px;
 
     &:hover {
         background: rgba(255, 255, 255, .2);
+    }
+}
+
+.page-head__menu--search {
+    background: url(../img/icon-search.png) center center no-repeat;
+    text-indent: 9999px;
+    margin-right: $inuit-base-spacing-unit;
+    float: right;
+    height: 100%;
+    width: 31px;
+
+    &:hover {
+        background: url(../img/icon-search--hover.png) center center no-repeat;
     }
 }
