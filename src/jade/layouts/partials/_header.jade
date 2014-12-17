@@ -1,11 +1,14 @@
 header.page-head
     nav.page-head__menu.wrapper.layout
         p.layout__item.page-head__menu--brand.one-fifth
-            span.text-uppercase Woo
-            span.text-bold 4
-            span.text-uppercase.text-italic Men
+            span.page-head__menu--brand-text.text-uppercase Woo
+            span.page-head__menu--brand-text.text-bold 4
+            span.page-head__menu--brand-text.text-uppercase.text-italic Men
         a.page-head__menu--home Accueil
         div.layout__item.page-head__menu--links.four-fifths
             a.page-head__menu--link Hommes
             a.page-head__menu--link Femmes
             a.page-head__menu--search Rechercher
+    div.page-head__search.wrapper.layout
+        input(type="text", placeholder="Rechercher...").layout-item.page-head__search--field.four-fifths
+        input(type="submit", value="Rechercher").layout-item.page-head__search--submit.one-fifth

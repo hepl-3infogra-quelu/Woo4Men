@@ -29,20 +29,20 @@ $header-height: 450px;
 
     @include media-query('portable') {
         background-position: center center;
-
-        span {
-            display: none;
-        }
     }
 }
-
+.page-head__menu--brand-text {
+    @include media-query('portable') {
+        display: none;
+    }
+}
 .page-head__menu--home {
     background: url(../img/icon-home.png) no-repeat center center;
     position: absolute;
     top: 10px;
     height: 60px;
     width: 60px;
-    text-indent: 9999px;
+    @include hideText();
     margin-left: -30px;
     @include transition(all, 1s, ease-in-out);
 
@@ -59,7 +59,6 @@ $header-height: 450px;
 .page-head__menu--links {
     background: $background-color-page-head-menu;
     height: 100%;
-    padding-left: $inuit-base-spacing-unit;
 }
 
 .page-head__menu--link {
@@ -70,11 +69,14 @@ $header-height: 450px;
     &:hover {
         background: rgba(255, 255, 255, .2);
     }
+    &:first-child {
+        margin-left: $inuit-base-spacing-unit--small;
+    }
 }
 
 .page-head__menu--search {
     background: url(../img/icon-search.png) center center no-repeat;
-    text-indent: 9999px;
+    @include hideText();
     margin-right: $inuit-base-spacing-unit;
     float: right;
     height: 100%;
@@ -83,4 +85,32 @@ $header-height: 450px;
     &:hover {
         background: url(../img/icon-search--hover.png) center center no-repeat;
     }
+}
+
+.page-head__menu--close-search {
+    @extend .page-head__menu--search;
+
+    background: url(../img/icon-home.png) center center no-repeat;
+    &:hover {
+        background: url(../img/icon-home.png) center center no-repeat;
+    }
+}
+
+.page-head__search {
+    height: 70px;
+}
+
+.page-head__search--field {
+    height: 100%;
+    color: $color-dark;
+    padding: 0 $inuit-base-spacing-unit;
+    border: none;
+    outline: none;
+}
+
+.page-head__search--submit {
+    height: 100%;
+    background: $color-brand url("../img/icon-search--hover.png") center center no-repeat;
+    border: none;
+    @include hideText();
 }
